@@ -66,12 +66,12 @@ export default function Exam(props){
     }
 
     return(
-        <div className="h-[100svh] w-full flex justify-center items-center">
-            <div className="h-[80%] min-w-[100%] flex flex-col items-center justify-between p-5">
-                <section className="place-self-start">
-                    <select className="bg-green-300 text-xl p-2 rounded-xl" value={counter} onChange={(e) => setCounter(Number(e.target.value))}>
+        <div className="h-[100svh] w-full flex justify-center items-center  bg-[#E6F0DC]">
+            <div className="h-[80%] min-w-[100%] lg:min-w-[70%] lg:h-[70%] flex flex-col items-center justify-between p-5">
+                <section className="place-self-start lg:place-self-center">
+                    <select className="bg-green-300 text-xl p-2 font-bold w-[100%] rounded-xl" value={counter} onChange={(e) => setCounter(Number(e.target.value))}>
                         {questions.map((items,index)=>(
-                            <option className="bg-white font-[400]" value={index}>Question {index+1}</option>
+                            <option className="bg-white font-[400] p-2" value={index}>Question {index+1}</option>
                         ))}
                     </select>
                 </section>
@@ -80,10 +80,10 @@ export default function Exam(props){
                     {question.type==='binary' && <TrueOrFalse question={question.question} choices={trueOrFalseChoices} setAnswer={handleAnswer} currentAnswer={currentAnswers[counter]}/>}
                     {question.type==='identification' && <Identification question={question.question} setAnswer={handleAnswer} currentAnswer={currentAnswers[counter]}/>}
                 </section>
-                <div className="grid grid-cols-2  gap-2 w-full relative">
-                    <button className="w-full font-[700] bg-red-400 p-2 rounded-2xl" type="button" onClick={handlePrev}>Previous</button>
-                    <button className="w-full font-[700] bg-yellow-400 p-2 rounded-2xl" type="button" onClick={handleNext}>Next</button>
-                    <button className="w-full font-[700] bg-green-400 p-2 rounded-2xl col-span-2" type="button" onClick={handleSubmit}>Submit</button>
+                <div className="grid grid-cols-2  gap-5 w-full lg:w-[40%] relative">
+                    <button className="w-full font-[700] bg-red-400 p-2 rounded-2xl lg:text-2xl" type="button" onClick={handlePrev}>Previous</button>
+                    <button className="w-full font-[700] bg-yellow-400 p-2 rounded-2xl lg:text-2xl" type="button" onClick={handleNext}>Next</button>
+                    <button className="w-full font-[700] bg-green-400 p-4 rounded-2xl col-span-2 lg:text-2xl" type="button" onClick={handleSubmit}>Submit</button>
                 </div>
                 
             </div>
