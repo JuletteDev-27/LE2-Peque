@@ -142,7 +142,7 @@ export default function LoginPage(props){
             <div className="lg:col-span-3 hidden lg:block bg-[url('/src/assets/img/Login_banner.jpg')] bg-right bg-cover"></div>
             <div className="lg:col-span-4 row-span-3 lg:row-span-1 flex flex-col justify-center items-center bg-[url('/src/assets/img/Login_banner.jpg')] bg-center bg-cover relative z-0 lg:bg-none">
                 <h1 className="text-5xl lg:text-8xl text-white text-shadow-md text-shadow-black font-[300] before:w-full before:h-full before:bg-[#e6f0dc]/30 before:absolute before:z-[-1] before:top-0 before:left-0"><span className="text-[#55883B] ">S</span>olana <span className="text-[#55883B]">E</span>xams</h1>
-                <div className="flex items-center justify-center gap-[0.5rem]">
+                <div className="flex items-center justify-center gap-[0.5rem] ">
                     <p className="font-[400] text-2xl lg:text-4xl italic pt-2 lg:pt-6">Powered by</p>
                     <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" className="w-[2rem]" alt="" srcset="" />
                 </div>

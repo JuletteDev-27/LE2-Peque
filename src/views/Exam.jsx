@@ -16,6 +16,7 @@ export default function Exam(props){
             props.setTotalScore(totalScore)
             props.setIsFinished(true)
             props.setTakingExam(false)
+            props.setUserAnswers(currentAnswers)
         }
     },[totalScore])
 
